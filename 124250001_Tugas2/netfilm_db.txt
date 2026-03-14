@@ -1,6 +1,6 @@
-The shimshon;100000;1990;9.8
+Galaxy;250000;2022;7.8
+Perfect World;15000;2025;8.6
 Soull Land;35000;2023;9.1
 Swallowed Star;200000;2024;8.9
-Perfect World;15000;2025;8.6
+The shimshon;100000;1990;9.8
 WDQK;300000;2023;7.9
-Galaxy;250000;2022;7.8

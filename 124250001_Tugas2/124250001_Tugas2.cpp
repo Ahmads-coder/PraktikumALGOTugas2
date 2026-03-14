@@ -13,7 +13,7 @@ struct Film{
 };
 
 // quick sort untuk mengurutkan rating film dari terbesar
-void quickSort(Film data[], int kiri, int kanan){
+void quickS(Film data[], int kiri, int kanan){
     int i = kiri;
     int j = kanan;
 // pivot diambil dari tengah data
@@ -38,10 +38,10 @@ void quickSort(Film data[], int kiri, int kanan){
     }
 //rekurssif
     if(kiri < j){
-        quickSort(data,kiri,j);
+        quickS(data,kiri,j);
     }
     if(i < kanan){
-        quickSort(data,i,kanan);
+        quickS(data,i,kanan);
     }
 }
 
@@ -107,9 +107,9 @@ int main(){
         }
 // mengurutkan film berdasarkan rating tertinggi
 	else if(menu == 2){
-		quickSort(data,0,n-1);
+		quickS(data,0,n-1);
 
-        cout << "\nKataloh berhasil diurutkan berdasarkan Rating Tertinggi\n";
+        cout << "\nKatalog berhasil diurutkan berdasarkan Rating Tertinggi\n";
 		cout << "\nTekan enter untuk kembali ke menu...";
         cin.ignore();
         cin.get();
