@@ -7,9 +7,9 @@ using namespace std;
 // menyimpan data film
 struct Film{
     string judul;
-    double lisensi;
+    int lisensi;
     int tahun;
-    double rating;
+    float rating;
 };
 
 // quick sort untuk mengurutkan rating film dari terbesar
@@ -17,7 +17,7 @@ void quickSort(Film data[], int kiri, int kanan){
     int i = kiri;
     int j = kanan;
 // pivot diambil dari tengah data
-    double pivot = data[(kiri+kanan)/2].rating;
+    float pivot = data[(kiri+kanan)/2].rating;
 
     Film temp;
     while(i <= j){
@@ -26,7 +26,8 @@ void quickSort(Film data[], int kiri, int kanan){
         }
         while(data[j].rating < pivot){
             j--;
-        } if(i <= j){
+        } 
+        if(i <= j){
             temp = data[i];
             data[i] = data[j];
             data[j] = temp;
@@ -56,7 +57,7 @@ int main(){
 
         char jdl[100];
 // baca file sampai akhir
-        while(fscanf(file,"%[^;];%lf;%d;%lf\n",
+        while(fscanf(file,"%[^;];%d;%d;%f\n",
         jdl,&data[n].lisensi,&data[n].tahun,&data[n].rating)!=EOF){
 
             data[n].judul = jdl;
@@ -249,7 +250,7 @@ int main(){
     file = fopen("netfilm_db.txt","w");
 
     for(int i=0;i<n;i++){
-        fprintf(file,"%s;%.0lf;%d;%.1lf\n",
+        fprintf(file,"%s;%d;%d;%.1f\n",
         data[i].judul.c_str(),
         data[i].lisensi,
         data[i].tahun,
