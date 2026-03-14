@@ -70,8 +70,8 @@ int main(){
         cout << "|     NETFILM SYSTEM - DASBOARD       |\n";
         cout << "+=====================================+\n";
         cout << "| [ 1 ] Lihat Katalog Film            |\n";
-        cout << "| [ 2 ] Urutan Rating (QuickSort)     |\n";
-        cout << "| [ 3 ] Urutan Abjad (Bubble Sort)    |\n";
+        cout << "| [ 2 ] Urutkan Rating (QuickSort)     |\n";
+        cout << "| [ 3 ] Urutkan Abjad (Bubble Sort)    |\n";
         cout << "| [ 4 ] Cari Film (Linear Search)     |\n";
         cout << "| [ 5 ] Cari Film (Binary Search)     |\n";
         cout << "| [ 6 ] Tambah Film Baru              |\n";
@@ -141,7 +141,7 @@ int main(){
         else if(menu == 4){
 
             if(n >= 30){
-                cout << "\nData sudah >= 30, gunakan Binary Search (Menu 5)\n";
+                cout << "\nData sudah >= 30, gunakan Binary Search\n";
                 cout << "\nTekan enter untuk kembali ke menu...";
                 cin.ignore();
                 cin.get();
@@ -172,7 +172,7 @@ int main(){
 // pencarian film dengan binary search
         else if(menu == 5){
             if(n < 30){
-                cout << "\nData kurang dari 30, gunakan Linear Search (Menu 4)\n";
+                cout << "\nData kurang dari 30, gunakan Linear Search\n";
                 cout << "\nTekan enter untuk kembali ke menu...";
                 cin.ignore();
                 cin.get();
